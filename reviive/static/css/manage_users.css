@@ -1,0 +1,288 @@
+
+/* Reset default styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Style for the 'section' element */
+section {
+    width: 100%;
+    height: 100vh;
+    background: color(srgb red green blue); /* Replace with an actual background color */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Style for the navigation bar within the 'section' */
+section nav {
+    height: 9vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #b8d4bb; /* Background color */
+    position: fixed;
+    left: 0;
+    z-index: 100;
+}
+
+/* Style for the logo in the navigation bar */
+section nav .logo img {
+    width: 100px;
+    height: 67px;
+    cursor: pointer;
+    margin: 8px 0;
+}
+
+/* Style for list items within the navigation */
+section nav li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+/* Style for links within navigation items */
+section nav li a {
+    color: #000;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Style for link hover effect */
+section nav li a:hover {
+    color: #135a3b;
+}
+
+/* Styling social icons */
+.social-icon i {
+    margin: 0 5px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    left: 222px;
+}
+/* Style for social icon hover effect */
+.social-icon i:hover {
+    color: #135a3b;
+    transform: scale(1.1);
+}
+
+/* Dropdown menu styles */
+ul li ul.dropdown li{
+    display: block;
+    background: #f6f4f4;
+    margin: 2px 0px;
+}
+ ul li ul.dropdown{
+    width: auto;
+    background: #b8d4bb;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li:hover ul.dropdown{
+    display: block;
+}
+
+/*css for main*/
+
+/* General styling for the whole page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Styling for the main content area */
+.head-title {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.head-title h1 {
+    margin: 0;
+    margin-top: 53px;
+}
+
+.table-data {
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th,
+table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Button styling */
+button {
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* Links styling */
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #23527c;
+}
+
+/* Form elements */
+select, input[type="hidden"] {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+/* Specific styling for roles and profile editing */
+.admin-role-management {
+    padding: 20px;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+/* Existing CSS for .no-wrap, keeping text from wrapping */
+.no-wrap {
+    white-space: nowrap;
+}
+
+/* Highlighting the 'Edit Profile' button */
+.no-wrap a {
+    display: inline-block; /* Make it behave like a button */
+    background-color: #5cb85c; /* Choose a distinct color for the button */
+    color: #fff; /* White text for better contrast */
+    padding: 8px 15px; /* Padding to increase the size */
+    border-radius: 5px; /* Rounded corners for a button-like appearance */
+    text-decoration: none; /* Remove underline from link */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the button */
+.no-wrap a:hover {
+    background-color: #4cae4c; /* Darker shade on hover */
+    text-decoration: none; /* Ensure underline doesn't come back on hover */
+    color: #fff; /* Maintain white text color */
+}
+
+
+
+
+
+/* Custom CSS for additional elements */
+.container {
+    background-color: #e9e9e9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.todo {
+    margin-top: 30px;
+}
+
+/* Responsive design adjustments */
+@media screen and (max-width: 600px) {
+    .table-data, .admin-role-management {
+        width: 100%;
+        margin: 0;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+
+/*css for main*/
+
+
+/*Footer*/
+
+/* Style for the footer */
+footer{
+    width: 100%;
+    background: #b8d4bb;
+}
+
+/* Style for the main content within the footer */
+footer .footer_main{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Style for tags and links in the footer */
+footer .footer_main .tag{
+    display: inline;
+    color: #000000;
+    margin: 10px 0;
+}
+
+
+footer .footer_main .tag a{
+    display: inline;
+    color: #000000;
+    margin: 10px 0;
+}
+
+/* Style for links in the footer on hover */
+footer .footer_main .tag a:hover{
+    display: inline;
+    color:  #135a3b;
+    margin: 10px 0;
+}
+
+/* Style for social icons in the footer */
+footer .footer_main .tag .social_link i{
+    position: relative;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+/* Style for social icons on hover in the footer */
+footer .footer_main .tag .social_link :hover{
+    position: relative;
+    color: #135a3b;
+    font-size: 20px;
+    margin: 0 5px;
+}
+

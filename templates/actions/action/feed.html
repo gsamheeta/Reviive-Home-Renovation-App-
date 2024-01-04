@@ -1,0 +1,13 @@
+<h3>Recent Activity</h3>
+
+<ul>
+{% for action in actions %}
+
+    <li>  {{ action.verb }} "<a href = "{% url 'reviive:renovationPriceGuide'   %}">{{ action.user }}</a>" {{ action.created }}</li>
+
+{% empty %}
+
+    <li>No activity yet.</li>
+
+{%  endfor %}
+</ul>

@@ -1,0 +1,292 @@
+        /* Reset default styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Style for the 'section' element */
+section {
+    width: 100%;
+    height: 100vh;
+    background: color(srgb red green blue); /* Replace with an actual background color */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Style for the navigation bar within the 'section' */
+section nav {
+    height: 9vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #b8d4bb; /* Background color */
+    position: absolute;
+    top: 0px;
+    z-index: 100;
+}
+
+/* Style for the logo in the navigation bar */
+section nav .logo img {
+    width: 100px;
+    height: 67px;
+    cursor: pointer;
+    margin: 8px 0;
+}
+
+/* Style for list items within the navigation */
+section nav li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+/* Style for links within navigation items */
+section nav li a {
+    color: #000;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Style for link hover effect */
+section nav li a:hover {
+    color: #135a3b;
+}
+
+/* Styling social icons */
+.social-icon i {
+    margin: 0 5px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    left: 222px;
+}
+/* Style for social icon hover effect */
+.social-icon i:hover {
+    color: #135a3b;
+    transform: scale(1.1);
+}
+
+/* Dropdown menu styles */
+ul li ul.dropdown li{
+    display: block;
+    background: #f6f4f4;
+    margin: 2px 0px;
+}
+ ul li ul.dropdown{
+    width: auto;
+    background: #b8d4bb;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li:hover ul.dropdown{
+    display: block;
+}
+
+
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 150px; /* Adjust the width as needed */
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.search-button {
+    background-color: #a5a5a5; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.search-button:hover {
+    background-color: #424242;
+}
+
+
+
+
+
+section .main .search-container{
+    position: relative !important;
+    top: 10%;
+    margin: 60px;
+}
+
+h2 {
+    text-align: center;
+    padding: 25px
+}
+
+section .main .search-container ul.messages{
+    font-weight: bold;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+}
+
+
+section .main .search-container ul.messages li.success{
+    background-color: lightgreen;
+    padding: 3px;
+    margin: 0.25cm;
+}
+section .main .search-container ul.messages li.info{
+    background-color: lightblue;
+    padding: 3px;
+    margin: 0.25cm;
+}
+section .main .search-container ul.messages li.warning{
+    background-color: red;
+    padding: 3px;
+    margin: 0.25cm;
+}
+#myInput {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+#myTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#myTable th, #myTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#myTable th {
+    background-color: #f2f2f2;
+}
+
+#myTable tr:hover {
+    background-color: #f2f2f2;
+}
+
+tr {
+    cursor: pointer;
+}
+tr a {
+    cursor: pointer;
+    font-size: 17px;
+    text-decoration: none;
+    color: grey;
+
+}
+tr:hover {
+    color: #000000;
+}
+td .btn {
+    display: inline-block;
+    padding: 8px 15px; /* Adjust padding to your preference */
+    margin: 5px; /* Adds space around the buttons */
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none; /* Remove underline from anchor tags */
+    color: white; /* Text color */
+}
+#myTable th, #myTable td a{
+    font-size: 12px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: 1px solid #007bff;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: 1px solid #dc3545;
+}
+
+/* Button hover effects */
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #0056b3;
+    border-color: #004085;
+    text-decoration: none; /* Remove underline from anchor tags */
+    color: white; /* Ensures the text color remains white */
+}
+
+.btn-danger:hover,
+.btn-danger:focus {
+    background-color: #c82333;
+    border-color: #bd2130;
+    text-decoration: none; /* Remove underline from anchor tags */
+    color: white; /* Ensures the text color remains white */
+}
+
+/*Footer*/
+
+/* Style for the footer */
+footer{
+    width: 100%;
+    background: #b8d4bb;
+}
+
+/* Style for the main content within the footer */
+footer .footer_main{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Style for tags and links in the footer */
+footer .footer_main .tag{
+    display: inline;
+    color: #000000;
+    margin: 10px 0;
+}
+
+
+footer .footer_main .tag a{
+    display: inline;
+    color: #000000;
+    margin: 10px 0;
+}
+
+/* Style for links in the footer on hover */
+footer .footer_main .tag a:hover{
+    display: inline;
+    color:  #135a3b;
+    margin: 10px 0;
+}
+
+/* Style for social icons in the footer */
+footer .footer_main .tag .social_link i{
+    position: relative;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+/* Style for social icons on hover in the footer */
+footer .footer_main .tag .social_link :hover{
+    position: relative;
+    color: #135a3b;
+    font-size: 20px;
+    margin: 0 5px;
+}

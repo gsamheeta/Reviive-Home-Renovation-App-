@@ -1,0 +1,75 @@
+{% extends "reviive/base.html" %}
+
+{% load static %}
+
+{% block page-title %}Profile for {{ user.username }}{% endblock %}
+
+{% block main %}
+
+    <div class="feed">
+    <div class="categories_card">
+         {% include "actions/action/feed.html" %}
+    </div>
+    </div>
+
+
+<div class="profile_info">
+
+    <h2 id="section-heading">Profile for {{ user.username }}</h2>
+
+    <dl>
+        <dt>Username</dt>
+        <dd>{{ user.username }}</dd>
+        <dt>Email address</dt>
+        <dd>{{ user.email }}</dd>
+        <dt>Role</dt>
+        <dd>{{ user.details.role }}</dd>
+        <dt>First Name</dt>
+        <dd>{{ user.first_name }}</dd>
+        <dt>Last Name</dt>
+        <dd>{{ user.last_name }}</dd>
+    </dl>
+    <br>
+    <!-- Edit Details Button -->
+    <button type="button" id="edit-button">Edit Details</button>
+</div>
+
+
+
+<div class="edit" style="display: none;" >
+
+<form method="POST" action="{% url 'users:profile' user.username %}">
+{#    <form method="post" action="{% url 'users:profile' username=user.username %}">#}
+
+
+    <label for="username">Username</label>
+    <input type="text" id="username" value="{{ user.username }}" disabled>
+
+    <label for="email">Email address</label>
+    <input type="email" name="email" id="email" value="{{ user.email }}">
+
+    <label for="first_name">First name</label>
+    <input type="text" name="first_name" id="first_name" value="{{ user.first_name }}">
+
+    <label for="last_name">Last name</label>
+    <input type="text" name="last_name" id="last_name" value="{{ user.last_name }}">
+
+
+    {% csrf_token %}
+
+    <input type="submit" value="Update Profile">
+    </form>
+</div>
+
+<script>
+    document.getElementById('edit-button').addEventListener('click', function() {
+        var editDiv = document.querySelector('.edit');
+        var infoDiv = document.querySelector('.profile_info');
+        editDiv.style.display = 'block';
+        infoDiv.style.display = 'none';
+    });
+</script>
+
+{% endblock %}
+
+{% block css %}{% static "css/profile.css" %}{% endblock %}

@@ -1,0 +1,202 @@
+
+/* Resetting default styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Styling the main section */
+section {
+    width: 100%;
+    height: 98vh;
+    background: color(srgb red green blue);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Styling the navigation bar */
+section nav {
+    height: 9vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #b8d4bb;
+    position: fixed;
+    left: 0;
+    z-index: 100;
+}
+
+/* Styling the logo within the navigation bar */
+section nav .logo img {
+    width: 100px;
+    height: 67px;
+    cursor: pointer;
+    margin: 8px 0;
+}
+
+/* Styling the navigation list items */
+section nav li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+/* Styling the navigation links */
+section nav li a {
+    color: #000;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Hover effect for navigation links */
+section nav li a:hover {
+    color: #135a3b;
+}
+
+/* Styling dropdown menu */
+ul li ul.dropdown li {
+    display: block;
+    background: #f6f4f4;
+    margin: 2px 0px;
+}
+
+ul li ul.dropdown {
+    width: auto;
+    background: darkgray; /* Replace with a valid color */
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+/* Display dropdown menu on hover */
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+
+
+
+
+.extra-padding {
+    padding: 20px;
+    background-color: #f4f4f4; /* Light grey background */
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto; /* Center the form */
+}
+
+.extra-padding form {
+    display: flex;
+    flex-direction: column;
+}
+
+.extra-padding label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.extra-padding input[type="text"],
+.extra-padding input[type="email"],
+.extra-padding input[type="password"],
+.extra-padding input[type="first_name"],
+.extra-padding input[type="last_name"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.extra-padding input[type="submit"] {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.extra-padding input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.extra-padding p {
+    font-style: italic;
+}
+
+
+
+
+/* Styling the footer */
+footer {
+    width: 100%;
+    background: #b8d4bb;
+}
+
+/* Styling elements within the footer */
+footer .footer_main {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Styling tags in the footer */
+footer .footer_main .tag {
+    display: inline;
+    color: #000000;
+    margin: 10px 0;
+}
+
+/* Styling links within tags in the footer */
+footer .footer_main .tag a {
+    display: inline;
+    color: #000000;
+    margin: 10px 0;
+}
+
+/* Hover effect for links within tags in the footer */
+footer .footer_main .tag a:hover {
+    display: inline;
+    color:  #135a3b;
+    margin: 10px 0;
+}
+
+/* Styling social links in the footer */
+footer .footer_main .tag .social_link i {
+    position: relative;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+/* Hover effect for social links in the footer */
+footer .footer_main .tag .social_link :hover {
+    position: relative;
+    color: #135a3b;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+/* Add styling for the section heading */
+#section-heading {
+    text-align: center; /* Center the title */
+   /* Adds space above the title */
+    margin-bottom: 2vh; /* Adds space below the title pushing the form down */
+    font-size: 2rem; /* Adjust the font size as needed */
+    color: #135a3b; /* Use your desired color */
+    padding-top: 10vh; /* Adds padding at the top to push the title down from the nav */
+}
+
+/* Adjust the .extra-padding class to add space at the top */
+.extra-padding {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    max-width: 600px;
+
+    /* Other styles remain the same */
+}
+
+/* Other CSS rules remain the same */

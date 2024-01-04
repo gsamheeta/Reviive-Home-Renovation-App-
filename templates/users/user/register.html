@@ -1,0 +1,41 @@
+
+{% extends "reviive/base.html" %}
+
+{% load static %}
+
+{% block page-title %}Register User{% endblock %}
+
+{% block main %}
+
+    <h2 id="section-heading">Register User</h2>
+
+    <div class="extra-padding">
+
+        <form id="register-username" action="{% url 'users:register' %}" method="post">
+            <p>*required.</p>
+<br>
+            <label for="register-username">Username</label>
+            <input id="register-username" name="username" type="text" required>
+
+            <label for="register-email">Email*</label>
+            <input id="register-email" name="email" type="email" required>
+
+            <label for="register-password">Password*</label>
+            <input id="register-password" name="password" type="password" required>
+<br><br>
+            <label for="register-first_name">first_name*</label>
+            <input id="register-first_name" name="first_name" type="first_name" required>
+
+            <label for="register-last_name">last_name*</label>
+            <input id="register-last_name" name="last_name" type="last_name" required>
+
+            <input type="submit" name="submit" value="Register">
+            {% csrf_token %}
+
+        </form>
+
+    </div>
+
+{% endblock %}
+
+{% block css %}{% static "css/register.css" %}{% endblock %}

@@ -1,0 +1,172 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Include your JavaScript code -->
+    <script src="{% static 'js/budgetEstimation.js' %}"></script>
+    <script src="{% static 'js/customerReview.js' %}"></script>
+    <script src="{% static 'js/renovationPriceGuide.js' %}"></script>
+
+    <!-- Title for the webpage -->
+    <title>Home page | {% block page-title %}{% endblock %}</title>
+      <link rel="stylesheet" href ="{% block css %}{% endblock %}">
+    <!-- Link to the external stylesheet for HomeUI -->
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{% static 'js/contractors.js' %}" defer></script>
+
+    <!-- Link to the boxicons CSS library -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Import font-awesome icons -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+{#    <link rel="stylesheet" href="css/global.css">#}
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+
+<section>
+    <!-- Navigation menu -->
+    <nav>
+        <div class="logo">
+            <!-- Logo image -->
+            <img src="{% static "img/logo.png" alt=" " %}">
+        </div>
+
+        <!-- Navigation links with dropdowns -->
+        <ul>
+            {% if request.session.username %}
+            <li><a href="{% url 'reviive:reviive_story_list' %}">HOME</a></li>
+            <li><a href="{% url 'reviive:getIdeas' %}">GET IDEAS &#x25BE;</a>
+                <ul class="dropdown">
+                    <!-- Submenu items for getting ideas -->
+                    <li><a href="{% url 'reviive:getIdeas' %}">Kitchen</a></li>
+                    <li><a href="{% url 'reviive:getIdeas' %}">Bedroom</a></li>
+                    <li><a href="{% url 'reviive:getIdeas' %}">Living</a></li>
+                    <li><a href="{% url 'reviive:getIdeas' %}">Dining</a></li>
+                    <li><a href="{% url 'reviive:getIdeas' %}">Outdoor</a></li>
+                    <li><a href="{% url 'reviive:getIdeas' %}">Baby & Kids</a></li>
+                    <li><a href="{% url 'reviive:getIdeas' %}">Home Office</a></li>
+                    <li><a href="{% url 'reviive:getIdeas' %}">Exterior</a></li>
+                    <li><a href="{% url 'reviive:getIdeas' %}">Storage & Closet</a></li>
+                    <!-- ... Other submenu items ... -->
+                </ul>
+            </li>
+            <li><a href="{% url 'reviive:findProf' %}">CONTRACTORS &#x25BE;</a>
+                <ul class="dropdown">
+                    <!-- Submenu items for finding professionals -->
+                    <li><a href="{% url 'reviive:findProf' %}">Interior Designers & Decorators</a></li>
+                    <li><a href="{% url 'reviive:findProf' %}">Architects & Building Designers</a></li>
+                    <li><a href="{% url 'reviive:findProf' %}">Design-Build Firms</a></li>
+                    <li><a href="{% url 'reviive:findProf' %}">Kitchen & Bathroom Designers</a></li>
+                    <li><a href="{% url 'reviive:findProf' %}">Home Builders</a></li>
+                    <li><a href="{% url 'reviive:findProf' %}">Roofing & Gutters</a></li>
+                    <li><a href="{% url 'reviive:findProf' %}">Cabinets & Cabinetry</a></li>
+                    <li><a href="{% url 'reviive:findProf' %}">Tile & Stone</a></li>
+
+                    <!-- ... Other submenu items ... -->
+                </ul>
+            </li>
+{#                <li><a href="{% url 'users:admin_edit_user' %}">PRICE POINT</a>#}
+            <li><a href="{% url 'reviive:budgetEstimation' %}">PRICE POINT</a>
+                <ul class="dropdown">
+                    <!-- Submenu items for help -->
+{#                    <li><a href="{% url 'reviive:contractors' %}">new contractor page</a></li>#}
+{#                    <li><a href="{% url 'reviive:renovationPriceGuide' %}">Customer Feedback</a></li>#}
+                </ul>
+            </li>
+
+             <li><a href="{% url 'reviive:renovationPriceGuide' %}">CUSTOMER FEEDBACK</a>
+
+             <!-- Search form -->
+{#            <form id="searchForm" action="search-results.html"   method="GET">#}
+{#                <input type="text" name="query" placeholder="Enter your search phrase" required>#}
+{#                <input type="submit" value="Search">#}
+{#            </form>#}
+            </li>
+
+            <li>
+                {% if request.user.is_superuser %}
+                    <a href="{% url 'users:manage_users' %}">USER MANAGEMENT</a>
+                {% endif %}
+            </li>
+
+
+              {% endif %}
+        </ul>
+
+
+
+       {% if request.session.username %}
+
+         <form id ="login_box">
+            <p>Logged in as <a href="{% url "users:profile" request.session.username %}"><strong>{{ request.session.username }}</strong></a>  | <a href="{% url 'users:logout' %}">Log out</a> </p>
+        </form>
+
+        {% else %}
+
+        <form id ="login-box" action="{% url 'users:login' %}" method="POST">
+            {%  csrf_token %}
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="pw" placeholder="Password">
+            <input type="submit" name="submit" value="Log in"> or <a href="{% url 'users:register' %}">Register</a>
+        </form>
+
+       {% endif %}
+
+    {% if request.session.username %}
+{#        <!-- Social icons -->#}
+        <div class="social-icon">
+{#            <i class='bx bxs-user'></i> <!-- User icon -->#}
+{#             <form id="searchForm" action="search-results.html"   method="GET">#}
+{#                <input type="text" name="query" placeholder="Enter your search phrase" required>#}
+{#                <input type="submit" value="Search">#}
+{#            </form>#}
+        </div>
+{#        <li><a href="{% url 'reviive:reviive_list' %}">logout</a>#}
+{#        </li>#}
+            {% endif %}
+
+    </nav>
+
+    <div class="main">
+
+        {% block main %}{% endblock %}
+    </div> <!-- main -->
+</section>
+<!-- Footer section -->
+<footer>
+    <div class="footer_main">
+        <div class="tag">
+            <!-- Footer links -->
+            <a href="#">@Copyright2023,Reviive</a> |
+            <a href="#Privacy Policy">Privacy Policy</a> |
+            <a href="#About">About</a> |
+            <a href="#Contact">Contact</a> |
+        </div>
+
+        <div class="tag">
+            <!-- Social media icons -->
+            <div class="social_link">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="{% block script %}{% endblock %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+/*!* Set the font family for the entire document to Arial or a sans-serif fallback *!*/
+/*body {*/
+/*    font-family: Arial, sans-serif;*/
+/*}*/
+
+/*!* Style the header with a green background, white text, center alignment, and padding *!*/
+/*header {*/
+/*    background-color: #b8d4bb; !* Background color in greenish tone *!*/
+/*    color: #fff; !* Text color in white *!*/
+/*    text-align: center; !* Center-align text within the header *!*/
+/*    padding: 20px; !* Add 20px of padding to all sides of the header *!*/
+/*}*/
+
+/*!* Style the form element *!*/
+/*form {*/
+/*    position: absolute; !* Position the form absolutely within its containing element *!*/
+/*    top: 17px; !* Set the distance from the top edge *!*/
+/*    right: 180px; !* Set the distance from the right edge *!*/
+/*}*/
+
+/*!* Style text input fields *!*/
+/*input[type="text"] {*/
+/*    padding: 5px; !* Add 5px of padding around text input fields *!*/
+/*    width: 180px; !* Set a fixed width of 180px for text input fields *!*/
+/*}*/
+
+/*!* Style submit button *!*/
+/*input[type="submit"] {*/
+/*    padding: 5px 15px; !* Add 5px padding on top/bottom and 15px padding on left/right of the button *!*/
+/*    !* background-color: #007BFF; (This line is commented out) *!*/
+/*    color: #000000; !* Set text color to black *!*/
+/*    border: none; !* Remove the border around the button *!*/
+/*    cursor: pointer; !* Change the cursor to a pointer on hover *!*/
+/*}*/

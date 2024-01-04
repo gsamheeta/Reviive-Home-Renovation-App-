@@ -1,0 +1,50 @@
+{% extends "reviive/base.html" %}
+{% load static %}
+
+{% block main %}
+
+<div class="search-container">
+ <h2>CUSTOMER FEED BACK</h2>
+
+        {% if messages %}
+        <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+
+    <div class="search-bar">
+        <input type="text" id="myInput" placeholder="Search here..">
+        <button onclick="searchTable()" class="search-button">Search</button>
+
+    </div>
+        <table id="myTable">
+            <tr>
+                <th>COMPANY NAME</th>
+                <th>REVIEWS</th>
+                <th>NAME</th>
+                <th>EDIT/DELETE</th>
+            </tr>
+            {% for renovation in renovations %}
+                <tr>
+                    <td>{{ renovation.item }}</td>
+                    <td>{{ renovation.price }}</td>
+                    <td>{{ renovation.name }}</td>
+                    {% if request.user.is_superuser or renovation.name == request.user.username %}
+
+                    <td>
+                        <a href="{% url 'reviive:edit_renovation' renovation.id %}" class="btn btn-primary">Edit</a>
+                        <a href="{% url 'reviive:delete_renovation' renovation.id %}" class="btn btn-danger">Delete</a>
+                    </td>
+                    {% endif %}
+
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}
+
+{% block css %}{% static "css/renovationPriceGuide.css" %}{% endblock %}
+<script src="{% static 'js/renovationPriceGuide.js' %}"></script>

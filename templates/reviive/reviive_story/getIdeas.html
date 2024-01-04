@@ -1,0 +1,77 @@
+{% extends "reviive/base.html" %}
+{% load static %}
+
+{% block page-title %}getIdeas{% endblock %}
+
+{% block main %}
+    <div class="categories_card">
+         <h2>Get Ideas</h2>
+         <a href="">Kitchen</a>
+         <a class="tab">Living</a>
+         <a href="">Bedroom</a>
+         <a href="GetIdeas.html">Living</a>
+         <a href="">Dining</a>
+         <a href="">Outdoor</a>
+         <a href="">Baby & Kids</a>
+         <a href="">Home Office</a>
+         <a href="">Exterior</a>
+         <a href="">Storage & Closet</a>
+    </div>
+
+
+ <div class="categorys">
+
+    <div class="categorys_box">
+
+        <div class="categorys_card">
+            <div class="categorys_image">
+                <img src="{% static 'img/2.jpg' %}">
+
+            </div>
+            <div class="categorys_tag">
+
+            </div>
+        </div>
+
+          <div class="categorys_card">
+            <div class="categorys_image">
+                <img src="{% static 'img/2.jpg' %}">
+            </div>
+
+        </div>
+
+
+         <div class="categorys_card">
+            <div class="categorys_image">
+                <img src="{% static 'img/6.jpg' %}">
+            </div>
+
+        </div>
+
+         <div class="categorys_card">
+            <div class="categorys_image">
+                <img src="{% static 'img/7.png' %}">
+            </div>
+
+        </div>
+
+        <div class="categorys_card">
+            <div class="categorys_image">
+                <img src="{% static 'img/13.jpg' %}">
+            </div>
+
+        </div>
+
+         <div class="categorys_card">
+            <div class="categorys_image">
+                <img src="{% static 'img/9.jpg' %}">
+            </div>
+
+        </div>
+
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block css %}{% static "css/getIdeas.css" %}{% endblock %}

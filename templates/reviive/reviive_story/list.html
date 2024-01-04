@@ -1,0 +1,48 @@
+
+{% extends "reviive/base.html" %}
+
+{% load static %}
+
+{% block page-title %}Home Page{% endblock %}
+
+{% block main %}
+
+{% if request.session.username %}
+
+
+    <div class="feed">
+    <div class="categories_card">
+        {% include "actions/action/feed.html" %}
+    </div>
+    </div>
+{% endif %}
+    <div class="main-tag">
+            <!-- Main content and welcome message -->
+            <p>
+                "Welcome to REVIIVE, your ultimate companion for all your home renovation and improvement projects.
+                With our user-friendly and feature-packed app, you can turn your renovation ideas into reality.
+                Whether you're looking to update a single room or embark on a full-scale home makeover, we've got you covered.
+                Explore a world of inspiration, browse a vast library of design ideas, manage your projects with ease, and connect
+                with skilled professionals—all at your fingertips. Start your journey toward a more beautiful and functional living
+                space today with REVIIVE."
+            </p>
+            <!-- Button to get started -->
+            <a href="#" class="main-btn">GET STARTED</a>
+    </div>
+
+        <!-- Image hover section -->
+        <div class="main">
+            <div class="main_img">
+                <!-- First image with an ID -->
+                <img id="image1" src="{% static "img/image1.jpg" %}" alt="Image 1">
+            </div>
+            <div class="main_img2">
+                <!-- Second image with an ID -->
+                <img id="image2" src="{% static "img/image2.jpg" %}" alt="Image 2">
+            </div>
+        </div>
+
+{% endblock %}
+
+
+{% block css %}{% static "css/HomeUI.css" %}{% endblock %}

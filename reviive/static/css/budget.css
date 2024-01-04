@@ -1,0 +1,214 @@
+/*!* Reset default styles for all elements *!*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*!* Style for the main section *!*/
+section{
+    width: 100%;
+    height: 98vh;
+    background: color(srgb red green blue);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*!* Style for the navigation bar within the section *!*/
+section nav{
+    height: 9vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* box-shadow: 0 0 10px #089da1; */
+    background: #b8d4bb; /* Background color for the navigation bar */
+    position: fixed;
+    left: 0;
+    z-index: 100;
+}
+
+/*!* Style for the logo within the navigation bar *!*/
+section nav .logo img{
+    width: 100px;
+    height: 67px;
+    cursor: pointer;
+    margin: 8px 0;
+}
+
+/*!* Style for list items in the navigation bar *!*/
+section nav li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+/*!* Style for links within list items in the navigation bar *!*/
+section nav li a{
+    color: #000;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*!* Style for links on hover in the navigation bar *!*/
+section nav li a:hover{
+    color:#135a3b;
+}
+
+/* Styling social icons */
+.social-icon i {
+    margin: 0 5px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    left: 222px;
+}
+/*!* Style for social icons on hover *!*/
+.social-icon i:hover{
+    color: #135a3b;
+    transform: scale(1.1);
+}
+
+/* Dropdown menu styles */
+ul li ul.dropdown li{
+    display: block;
+    background: #f6f4f4;
+    margin: 2px 0px;
+}
+ ul li ul.dropdown{
+    width: auto;
+    background: #00FF*C; /* Replace with a valid color value */
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+/* ul li a:hover{
+    background: #222;
+} */
+ul li:hover ul.dropdown{
+    display: block;
+}
+
+
+
+
+#calculatorContainer {
+    left: 587px;
+    top: 128px;
+    /* margin: 20px; */
+    position: absolute;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    #calculatorContainer h1 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #calculatorContainer label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    #calculatorContainer input[type='text'],
+    #calculatorContainer input[type='number'] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    #calculatorContainer button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    #calculatorContainer button:hover {
+        background-color: #45a049;
+    }
+
+    #calculatorContainer #expenseList {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #calculatorContainer #expenseList li {
+        background-color: #eee;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 4px;
+    }
+
+    #calculatorContainer #totalExpenses {
+        font-weight: bold;
+    }
+
+
+
+
+
+
+    /*Footer*/
+
+/* Style for the footer */
+footer{
+    width: 100%;
+    background: #b8d4bb;
+}
+
+/* Style for the main content within the footer */
+footer .footer_main{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Style for tags and links in the footer */
+footer .footer_main .tag{
+    display: inline;
+    color: #000000;
+    margin: 10px 0;
+}
+
+
+footer .footer_main .tag a{
+    display: inline;
+    color: #000000;
+    margin: 10px 0;
+}
+
+/* Style for links in the footer on hover */
+footer .footer_main .tag a:hover{
+    display: inline;
+    color:  #135a3b;
+    margin: 10px 0;
+}
+
+/* Style for social icons in the footer */
+footer .footer_main .tag .social_link i{
+    position: relative;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+/* Style for social icons on hover in the footer */
+footer .footer_main .tag .social_link :hover{
+    position: relative;
+    color: #135a3b;
+    font-size: 20px;
+    margin: 0 5px;
+}

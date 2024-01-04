@@ -1,0 +1,76 @@
+{% extends "reviive/base.html" %}
+{% load static %}
+
+{% block main %}
+    <div class="head-title">
+        <div class="left">
+            <h1>User Role Management</h1>
+        </div>
+    </div>
+    <div class="table-data">
+        <div class="todo">
+            <div class="container">
+                {% if request.user.is_superuser %}
+                    <div class="admin-role-management">
+                        <table>
+                            <tr>
+                                <th>Username</th>
+                                <th>Role</th>
+                                <th>Change Role</th>
+                                <th>Edit Profile</th>
+                            </tr>
+                            {% for user in all_users %}
+                                <tr>
+                                    <td>{{ user.username }}</td>
+                                    <td>{{ user.details.role }}</td>
+                                    <td class="table-cell">
+                                        <form method="POST" action="{% url 'users:change_user_role' %}">
+                                            {% csrf_token %}
+                                            <select name="role" id="user-role">
+                                                <option value="" disabled selected>change new role</option>
+                                                <option value="admin">Admin User</option>
+                                                <option value="regular">Registered User</option>
+                                                <option value="unregistered">Unregistered User</option>
+                                            </select>
+                                            <input type="hidden" name="user_id" value="{{ user.id }}">
+                                            <button type="submit">role</button>
+                                        </form>
+                                    </td>
+                                    <td class="no-wrap">
+                                        <a href="{% url 'users:profile' user.username %}">Edit Profile</a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                {% else %}
+                    <p>You do not have permission to view this page.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block script %}
+    <script>
+        $(document).ready(function () {
+            $('.container').on('click', '.delete-profile', function () {
+                // Delete Profile button clicked
+                const confirmation = confirm('Are you sure you want to delete your profile? This action cannot be undone.');
+                if (confirmation) {
+                    alert('Profile deleted successfully');
+                    window.location.href = "{% url 'users:register' %}";
+                }
+            });
+
+            $('.container').on('click', '.save-button', function () {
+                // Save Changes button clicked
+                alert('Profile has been updated');
+                window.location.href = "{% url 'users:register' %}";
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block css %}{% static "css/manage_users.css" %}{% endblock %}

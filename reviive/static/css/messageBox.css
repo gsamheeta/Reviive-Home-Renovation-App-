@@ -1,0 +1,345 @@
+/* Reset default styles for all elements */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Styling for the main section */
+section{
+    width: 100%;
+    height: 96vh;
+    background: color(srgb red green blue);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Styling for the navigation bar */
+section nav{
+    height: 9vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* box-shadow: 0 0 10px #089da1; */
+    background: #b8d4bb;
+    position: fixed;
+    left: 0;
+    z-index: 100;
+}
+
+/* Styling for the logo in the navigation bar */
+section nav .logo img{
+    width: 100px;
+    height: 67px;
+    cursor: pointer;
+    margin: 8px 0;
+}
+
+/* Styling for list items in the navigation bar */
+section nav li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+/* Styling for links in the navigation bar */
+section nav li a{
+    color: #000;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Styling for links on hover in the navigation bar */
+section nav li a:hover{
+    color:#135a3b;
+}
+
+
+/* Styling social icons */
+.social-icon i {
+    margin: 0 5px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    left: 222px;
+}
+
+/* Styling for social media icons on hover */
+.social-icon i:hover{
+    color: #135a3b;
+    transform: scale(1.1);
+}
+
+ul li ul.dropdown li{
+    display: block;
+    background: #f6f4f4;
+    margin: 2px 0px;
+}
+ ul li ul.dropdown{
+    width: auto;
+    background: #00FF*C;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+/* Show dropdown menu on hover */
+ul li:hover ul.dropdown{
+    display: block;
+}
+
+
+section .main .main_img img{
+    width: 500px;
+    position: relative;
+    top: 6px;
+    left: -373px;
+}
+
+section .main .main_img2 img {
+    width: 500px;
+    position: relative;
+    top: 6px;
+    left: -287px;
+}
+/*----main---*/
+
+/* Styling for main content section */
+section .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 10%;
+}
+
+/* Styling for heading in the main section */
+section .main h1{
+    position: relative;
+    font-size: 55px;
+    top: 371px;
+    left: 25px;
+}
+
+/* Styling for a portion of text within the main section */
+section .main h1 span{
+    color: #d5dddd;
+}
+
+/* Styling for paragraphs in the main section */
+section .main P{
+    width: 650px;
+    text-align: justify;
+    line-height: 22px;
+    position: relative;
+    top: 350px;
+    left:276px;
+    color: #080808;
+}
+
+
+
+/*----removed one---*/
+section .main .main-tag .main-btn{
+    background: #b8d4bb;
+    padding: 0px 2px;
+    position: relative;
+    top: 137px;
+    left: 280px;
+    color: #05110c;
+    text-decoration: none;
+    font-size: 38px;
+}
+
+/* Styling for a button in the main section (Note: One rule is removed) */
+/* Styling for dropdown menu */
+
+
+/*message box*/
+
+/* Styling for a message box */
+.frem {
+    width: 88rem;
+    height: 100%;
+    background: white;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 12px 12px 12px;
+}
+
+/* Styling for a logo and name within the message box */
+.frem .logo-name {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 30px;
+}
+
+.frem .logo-name .logo {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    position: relative;
+    top: -25px;
+    left: -92px;
+    border-radius: 35px 35px 0px 0px;
+}
+.frem .logo-name .logo::before {
+    content: "";
+    width: 31px;
+    height: 38px;
+    background: white;
+    position: absolute;
+    right: -23px;
+    top: 23px;
+}
+
+.frem .logo-name .logo::after {
+    content: "";
+    width: 31px;
+    height: 38px;
+    background: #eaedf2;
+    position: absolute;
+    right: -28px;
+    top: 5px;
+    border-bottom-left-radius: 25px;
+}
+
+/* Styling for a logo image within the message box */
+.frem .logo-name .logo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 29px;
+    object-fit: cover;
+}
+.frem .logo-name p {
+    position: relative;
+    left: 160px;
+    height: 706px;
+    font-weight: 600;
+    color: #464646;
+}
+
+/* Styling for a text area within the message box */
+.frem .text-area {
+    width: 54rem;
+    height: 1005;
+    min-height: 26rem;
+    background: #eaedf2;
+    border-radius: 18px;
+    border: none;
+    outline: none;
+    padding: 12px;
+    color: #484848;
+    font-size: 21px;
+    font-family: cursive;
+}
+
+/* Placeholder text for the text area */
+.text-area:empty::before {
+    content: attr(data-placeholder);
+    color: #7c7c7c;
+    font-family: auto;
+}
+
+/* Styling for a bottom container */
+.bottom-cont {
+    width: 25rem;
+    height: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+/* Styling for links and icons within the bottom container */
+.bottom-cont a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 17px;
+}
+
+.bottom-cont a img {
+    width: 27px;
+}
+.bottom-cont a:nth-child(1) {
+    background: #1051ff38;
+    color: #1051ff;
+}
+.bottom-cont a:nth-child(2) {
+    background: #15cf3736;
+    color: #15cf37;
+}
+.bottom-cont a:nth-child(3) {
+    background: #ffc02440;
+}
+.bottom-cont a:nth-child(4) {
+    background: #ff344b40;
+}
+
+/* Styling for footer */
+
+footer{
+    width: 100%;
+    background: #b8d4bb;
+}
+
+/* Styling for the main content within the footer */
+footer .footer_main{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Styling for tags and social links within the footer */
+footer .footer_main .tag{
+    display: inline;
+    color: #000000;
+    margin: 10px 0;
+}
+
+
+/* Styling for links within tags in the footer */
+footer .footer_main .tag a{
+    /* Styles for links within tags */
+    display: inline;
+    color: #000000;
+    margin: 10px 0;
+}
+
+footer .footer_main .tag a:hover{
+    display: inline;
+    color:  #135a3b;
+    margin: 10px 0;
+}
+
+/* Styling for social media icons within tags in the footer */
+footer .footer_main .tag .social_link i{
+    /* Styles for social media icons */
+    position: relative;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+/* Styling for social media icons on hover within tags in the footer */
+footer .footer_main .tag .social_link :hover{
+    /* Styles for social media icons on hover */
+    position: relative;
+    color: #135a3b;
+    font-size: 20px;
+    margin: 0 5px;
+}

@@ -1,0 +1,339 @@
+
+/* Resetting default styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Styling the main section */
+section {
+    width: 100%;
+    height: 98vh;
+    background: color(srgb red green blue);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Styling the navigation bar */
+section nav {
+    height: 9vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #b8d4bb;
+    position: fixed;
+    left: 0;
+    z-index: 100;
+}
+
+/* Styling the logo within the navigation bar */
+section nav .logo img {
+    width: 100px;
+    height: 67px;
+    cursor: pointer;
+    margin: 8px 0;
+}
+
+/* Styling the navigation list items */
+section nav li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+/* Styling the navigation links */
+section nav li a {
+    color: #000;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Hover effect for navigation links */
+section nav li a:hover {
+    color: #135a3b;
+}
+
+/* Styling dropdown menu */
+ul li ul.dropdown li {
+    display: block;
+    background: #f6f4f4;
+    margin: 2px 0px;
+}
+
+ul li ul.dropdown {
+    width: auto;
+    background: darkgray; /* Replace with a valid color */
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+/* Display dropdown menu on hover */
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+
+
+.profile_info {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 147px;
+    left: 402px;
+}
+
+#section-heading {
+    color: #333;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0;
+}
+
+
+
+.edit {
+        /* Add your overall styling for the "edit" class here */
+        max-width: 400px;
+        margin: 0 auto;
+        position: absolute;
+        top: 147px;
+        left: 570px;
+    }
+
+    .edit label {
+        /* Add your styling for labels inside the "edit" class here */
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .edit input {
+        /* Add your styling for input fields inside the "edit" class here */
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+    }
+
+    .edit input[type="submit"] {
+        /* Add your styling for the submit button inside the "edit" class here */
+        background-color: black;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .edit input[type="submit"]:hover {
+        /* Add your styling for the submit button on hover inside the "edit" class here */
+        background-color: black;
+    }
+
+
+
+
+
+/* Styling the footer */
+footer {
+    width: 100%;
+    background: #b8d4bb;
+}
+
+/* Styling elements within the footer */
+footer .footer_main {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Styling tags in the footer */
+footer .footer_main .tag {
+    display: inline;
+    color: #000000;
+    margin: 10px 0;
+}
+
+/* Styling links within tags in the footer */
+footer .footer_main .tag a {
+    display: inline;
+    color: #000000;
+    margin: 10px 0;
+}
+
+/* Hover effect for links within tags in the footer */
+footer .footer_main .tag a:hover {
+    display: inline;
+    color:  #135a3b;
+    margin: 10px 0;
+}
+
+/* Styling social links in the footer */
+footer .footer_main .tag .social_link i {
+    position: relative;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+/* Hover effect for social links in the footer */
+footer .footer_main .tag .social_link :hover {
+    position: relative;
+    color: #135a3b;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+
+/*categorys*/
+
+/* Style for category section */
+.feed .categorys{
+    margin-left: 20%;
+    height: 70vh;
+    margin-bottom: 200px;
+}
+
+/* Style for category section heading */
+.feed .categorys h1{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* Style for category cards */
+.feed .categorys .categorys_box{
+    left: 402px;
+    top: 45px;
+    position: absolute;
+    width: 59%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.feed .categorys .categorys_box .categorys_card{
+    margin-top: 14%;
+    width: 261px;
+    height: 251px;
+    text-align: center;
+    /* padding: 5px; */
+    /* border: 1px solid #919191;  */
+    display: inline-block;
+}
+
+/* Style for the fixed category card */
+.feed .categories_card{
+    background: #f3f0f1;
+    border: 1px solid #000000;
+	position: fixed;
+	height: 105%;
+	width: 20%;
+	top: -94px;
+	left: 0;
+	z-index: 1;
+	overflow-x: hidden;
+	padding-top: 180px;
+}
+
+.feed .categories_card h2{
+    color: rgb(5, 5, 5);
+    margin-bottom: 30px;
+    margin-left: 10%;
+    font-size: 30px;
+}
+
+.feed .categories_card a
+{
+    /*margin-left: 5%;*/
+	/*color: #000000;*/
+	/*padding: 10px 15px 10px 16px;*/
+	/*text-decoration: none;*/
+	/*font-size: 25px;*/
+	/*display: block;*/
+}
+
+/* Style for the active link in the category card */
+.feed .categories_card a:active
+{
+    background-color: 089da1;
+	color: #000000;
+
+
+}
+
+/* Style for the link on hover in the category card */
+.feed .categories_card a:hover
+{
+	background: #089da1;
+}
+
+
+.tab{
+    background: rgb(154 180 157);
+}
+
+.feed .categorys .categorys_box .categorys_card:hover{
+    box-shadow: 0 0 5px #089da1;
+}
+
+/* Style for category card image and tag */
+.feed .categorys .categorys_box .categorys_card .categorys_image{
+    width: 150px;
+    height: 220px;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+.feed .categorys .categorys_box .categorys_card .categorys_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+
+/* Scale image on hover in the category card */
+.feed .categorys .categorys_box .categorys_card:hover .categorys_image img{
+    transform: scale(1.1);
+}
+
+/* Style for category card tag */
+.feed .categorys .categorys_box .categorys_card .categorys_tag p{
+    font-family: queen of camelot;
+    font-size: 20px;
+    margin: 8px 0;
+}
+
+/* Style for category card tag icon */
+.feed .categorys .categorys_box .categorys_card .categorys_tag .categorys_icon{
+    color: #089da1;
+    margin-bottom: 10px;
+}
+
+/* Style for category card tag button */
+.feed .categorys .categorys_box .categorys_card .categorys_tag .categorys_btn{
+    padding: 8px 20px;
+    border: 2px solid #089da1;
+    text-decoration: none;
+    color: #000;
+}

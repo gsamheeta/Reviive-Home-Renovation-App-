@@ -1,0 +1,32 @@
+{% extends "reviive/base.html" %}
+
+{% load static %}
+{#{% load humanize %}#}
+
+
+{% block page-title %}Contrators{% endblock %}
+<link rel="icon" href="{% static 'reviive/base.html' %}" type="image/x-icon">
+{% block main %}
+
+    <div id = news>
+        <h2 id ="section-heading">Find Professionals</h2>
+        <div class="news-story">
+            <h3 class="news-title"><a href="samheeta.g@gmail.com">samheeta</a></h3>
+            <p class="news-description">hiehello</p>
+
+            <p class="news-byline">Submitted by <a href="#">hello world</a> 44/55/200 <a href="{% url 'reviive:renovationPriceGuide' %}" class="comments">view 30 comments</a></p>
+            <div class="news-pts">
+                <button class="upvote">+</button>
+                <div class="score">150</div>
+                 <button class="downvote">-</button>
+                <a href="{% url 'reviive:customerReview' %}" class="categorys_btn">Give your feedback</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block css %}{% static "css/contractors.css" %}{% endblock %}
+<script src="{% static 'js/contractors.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script defer src="{% static 'js/contractors.js' %}"></script>

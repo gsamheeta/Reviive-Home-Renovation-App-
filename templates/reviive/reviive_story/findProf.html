@@ -1,0 +1,85 @@
+{% extends "reviive/base.html" %}
+{% load static %}
+
+{% block page-title %}findProf{% endblock %}
+
+{% block main %}
+     <div class="categorys">
+
+            <div class="categorys_box">
+
+                <div class="categorys_card">
+                    <div class="categorys_image">
+                        <img src="{% static 'img/17.jpg' %}">
+                    </div><br>
+                    <div class="categorys_tag">
+                        <h3>Amendis interior design</h3>
+                        <p>Interior Designer & Raumausstatter | Hamburg</p>
+                        <h3>services provided</h3>
+                        <p>Kitchen Remodeling, Bathroom Remodeling, Interior Painting, Exterior Painting,
+                            Carpentry and Woodwork, Flooring Installation, Electrical Work, Plumbing Services,</p><br>
+                        <a href="{% url 'reviive:customerReview' %}" class="categorys_btn">Feedback</a>
+                        <a href="{% url 'reviive:messageBox' %}"  class="categorys_btn">Send Message</a>
+                    </div>
+                </div>
+
+                <div class="categorys_card">
+                    <div class="categorys_image">
+                        <img src="{% static 'img/2.jpg' %}">
+                    </div><br>
+                    <div class="categorys_tag">
+                        <h3>Forma Design</h3>
+                        <p>Interior Designer & Raumausstatter | Hamburg</p>
+                        <h3>services provided</h3>
+                        <p>Kitchen Remodeling, Bathroom Remodeling, Interior Painting, Exterior Painting,
+                            Carpentry and Woodwork, Flooring Installation, Electrical Work, Plumbing Services,</p><br>
+                            <a href="{% url 'reviive:customerReview' %}" class="categorys_btn">Feedback</a>
+                            <a href="{% url 'reviive:messageBox' %}"  class="categorys_btn">Send Message</a>
+                    </div>
+                </div>
+
+                <div class="categorys_card">
+                    <div class="categorys_image">
+                        <img src="{% static 'img/9.jpg' %}">
+                    </div><br>
+                    <div class="categorys_tag">
+                        <h3>Carnemark design</h3>
+                        <p>Interior Designer & Raumausstatter | Hamburg</p>
+                        <h3>services provided</h3>
+                        <p>Kitchen Remodeling, Bathroom Remodeling, Interior Painting, Exterior Painting,
+                            Carpentry and Woodwork, Flooring Installation, Electrical Work, Plumbing Services,</p><br>
+                            <a href="{% url 'reviive:customerReview' %}" class="categorys_btn">Feedback</a>
+                            <a href="{% url 'reviive:messageBox' %}"  class="categorys_btn">Send Message</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+            <!-- Main content section -->
+    <div class="main">
+        <!-- Categories section -->
+         <div class="categors">
+             <!-- Add content for categories if needed -->
+             </div>
+
+             <!-- Categories card -->
+             <div class="categories_card">
+{#                    <h2>Find Professionals</h2>#}
+{#                    <a href="">Interir Designers</a>#}
+{#                    <a href="">Building Designers</a>#}
+{#                    <!-- <a class="tab">Architects & Building Designers</a> -->#}
+{#                    <a href="">Design-Build Firms</a>#}
+{#                    <a href="">Bathroom Designers</a>#}
+{#                    <a href="">General Contractors</a>#}
+{#                    <a href="">Home Builders</a>#}
+{#                    <a href="">Roofing & Gutters</a>#}
+{#                    <a href="">Kitchen Remodelers</a>#}
+{#                    <a href="">Tile & Stone</a>#}
+                 {% include "actions/action/feed.html" %}
+                </div>
+     </div>
+
+{% endblock %}
+
+{% block css %}{% static "css/findProf.css" %}{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "reviive/base.html" %}
+
+{% load static %}
+
+{% block page-title %}messageBox{% endblock %}
+
+{% block main %}
+    <div class="frem">
+    <div class="logo-name">
+
+        <p>WHAT DO YOU WANT TO SHARE</p>
+    </div>
+    <div class="text-area" contenteditable data-placeholder="Write here"></div>
+    <div class="bottom-cont">
+        <a href="#">ADD PHOTO</a>
+        <a href="#">SEND</a>
+
+    </div>
+    </div>
+{% endblock %}
+
+{% block css %}{% static "css/messageBox.css" %}{% endblock %}

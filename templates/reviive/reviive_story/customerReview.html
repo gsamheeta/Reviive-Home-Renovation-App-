@@ -1,0 +1,32 @@
+{% extends "reviive/base.html" %}
+
+{% load static %}
+
+{% block page-title %}Budget Estimation Calculator{% endblock %}
+
+{% block main %}
+    <div>
+
+    <div class="contractor-profile">
+
+        <form id="ad-news-story" action=" " method="post">
+            <h1>Service Feedback</h1><br>
+
+            <label for="add-title">Company Name</label>
+            <input id="add-title" name="add-title" type="text" required><br>
+            <br>
+
+            <label for="add-description">Customer Review</label>
+            <input id="add-description" name="add-description" type="text" required>
+
+            <input type="submit" name="submit" value="Submit Review">
+            {% csrf_token%}
+        </form>
+    </div>
+    </div>
+
+{% endblock %}
+
+{% block css %}{% static "css/customerReview.css" %}{% endblock %}
+<script src="{% static 'js/customerReview.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

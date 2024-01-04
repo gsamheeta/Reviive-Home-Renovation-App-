@@ -1,0 +1,32 @@
+{% extends "reviive/base.html" %}
+
+{% load static %}
+
+{#{% block page-title %}Budget Estimation Calculator{% endblock %}#}
+
+{% block main %}
+<div>
+    <!-- Budget Estimation Calculator Section -->
+    <div id="calculatorContainer" >
+        <h1>Budget Estimation Calculator</h1>
+        <!-- Input fields for item and cost -->
+        <label for="item">Item:</label>
+        <input type="text" id="item" placeholder="Enter item name">
+        <label for="cost">Cost:</label>
+        <input type="number" id="cost" placeholder="Enter cost">
+         <!-- Button to add an expense -->
+        <button id="addExpense">Add Expense</button>
+        <!-- List of expenses will be displayed here -->
+        <ul id="expenseList">
+            <!-- Expenses will be listed here -->
+        </ul>
+        <!-- Total Expenses -->
+        <p>Total Expenses: $<span id="totalExpenses">0.00</span></p>
+    </div>
+</div>
+{% endblock %}
+
+{% block css %}{% static "css/budget.css" %}{% endblock %}
+
+<script src="{% static 'js/budgetEstimation.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
